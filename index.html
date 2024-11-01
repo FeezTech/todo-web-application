@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- This code is needed for responsive design to work.
+     (Responsive design = make the website look good on smaller screen sizes like a phone or a tablet). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- Load a font called Roboto from Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- load font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Here are the CSS files for this page. -->
+    <link rel="stylesheet" href="/styles/todo-homepage.css">
+
+    
+</head>
+<body>
+
+    <header class="homepage-header-container">
+        <div class="todo-list-icon">
+            <img class="todo-icon" src="/images/Task-list icon.jpg" alt="Todo-icon">
+        </div>
+
+        <nav id="nav-menu-container">
+            <ul id="menu" role="menu">
+                <li><a href="/pages/Todo-task-intro.html">Introduction</a></li>
+                <li><a href="/pages/tasks.html">All Tasks</a></li>
+                <li><a href="/pages/pending-tasks.html">Pending Tasks</a></li>
+                <li><a href="/pages/completed-tasks.html">Completed Tasks</a></li>
+            </ul>
+        </nav>
+    
+        <div class="menu-toggle" onclick="toggleMenu()" aria-controls="menu" aria-expanded="false" aria-label="Toggle Navigation">
+            &#9776;
+        </div>
+    </header>
+
+    <main class="task-addition-container">
+        <div class="introduction-container">
+            <h1><i class="fas fa-tasks"></i>  You don't want to forget your task?</h1>
+            <p>Set up a reminder to catch up with your tasks accurately!</p>
+        </div>
+        <label for="task">Add Task:</label>
+        <div class="input-icon">
+            <i class="fas fa-tasks"></i> 
+            <input type="text" name="task" id="task" placeholder="Enter your task">
+        </div>
+        
+        <div class="input-icon">
+            <i class="fas fa-calendar-alt"></i>
+            <input type="date" id="task-date">
+        </div>
+        <div class="input-icon">
+            <i class="fas fa-clock"></i>
+            <input type="time" id="task-time">
+        </div>
+
+        <div class="task-button">
+            <button id="taskButton" class="btn">Add Task</button>
+        </div>
+    </main>
+
+    
+    <script src="/scripts/toggleButton.js"></script>
+    <script src="/scripts/addTask.js"></script>
+</body>
+</html>
